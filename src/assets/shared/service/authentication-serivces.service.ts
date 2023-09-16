@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { User, UserCrendentails, UserSession } from '../models/authentication.model';
+import { ChangePassword, User, UserCrendentails, UserSession } from '../models/authentication.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 import {HttpClient} from '@angular/common/http'
 
@@ -69,6 +69,15 @@ export class AuthenticationSerivces {
     let body = {otp: otp, email: this.user.email}
     return this.http.post<string>(this.baseUrl + "/verify-otp",body);
   }
+
+  changePassword(oldPassword:string, newPassword:string): Observable<any>{
+    let changePassword: ChangePassword={
+      email: this.user.email,
+      oldPassword:oldPassword,
+      newPassword:newPassword,
+    }
+    return this.http.post(this.baseUrl + "/change-password",changePassword)
+   }
 
 
 

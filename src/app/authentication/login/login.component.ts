@@ -34,6 +34,7 @@ export class LoginComponent {
     },
     (err:HttpErrorResponse)=>{
       if(err.status === 401){
+
         alert(err.error.errorMessage);
         this.loginForm.reset();
       }

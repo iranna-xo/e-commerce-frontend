@@ -1,1 +1,10 @@
-<h1>Welcome {{user && user.name}}</h1>
+<div class="p-4">
+  <h1>Welcome {{user && user.name}}</h1>
+  <div>
+    <div class="px-3">Product Catalog</div>
+    <app-product-catalog [products] ="products"></app-product-catalog>
+  </div>
+</div>
+
+
+

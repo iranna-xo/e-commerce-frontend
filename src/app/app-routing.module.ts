@@ -14,7 +14,7 @@ const routes: Routes = [
   {
     path:'app',
     loadChildren: () => import('./home/home.module').then(m => m.HomeModule),
-    canActivate:[UserAuthGuardGuard]
+    // canActivate:[UserAuthGuardGuard]
   }
 
 ];

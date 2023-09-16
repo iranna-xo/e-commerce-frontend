@@ -1,5 +1,9 @@
-<div class="d-flex justify-content-between navbar" style="background-color:aqua;">
+<div class="d-flex justify-content-between navbar px-4" style="background-color:aqua;">
   <div>E-commerce website</div>
-  <button class="btn btn-danger" *ngIf="isLoggedIn" (click)="signOut()">Sign out</button>
+  <app-settings  ></app-settings>
+  <!-- uncomment the below line -->
+  <!-- <app-settings *ngIf="isLoggedIn" ></app-settings> -->
+
 </div>
 <router-outlet></router-outlet>
+
