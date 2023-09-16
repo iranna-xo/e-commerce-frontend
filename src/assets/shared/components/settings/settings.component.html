@@ -1,0 +1,7 @@
+<i class="icon-cog" [ngbPopover]="popOver" ></i>
+
+<ng-template #popOver>
+  <div class="setting-actions" (click)="openCart()">Open Cart</div>
+  <div class="setting-actions" (click)="changePassword()">Change password</div>
+  <div class="setting-actions" (click)="signOut()">Sign out</div>
+</ng-template>

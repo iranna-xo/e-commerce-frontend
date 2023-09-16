@@ -1,0 +1,10 @@
+<div class="card">
+  <div class="d-flex flex-column p-2 pl-3">
+    <span>{{product.name}}</span>
+    <img  class="product-image py-2" [src]="product.imageUrl" alt="./assets/images/default.jpg">
+    <span>{{product.description}}</span>
+    <span>Amount: ₹{{product.amount}}</span>
+    <button *ngIf="!fromCart" (click)="addToCart()">Add to cart</button>
+    <button *ngIf="fromCart" (click)="removeFromCart()">Remove from cart</button>
+  </div>
+</div>
